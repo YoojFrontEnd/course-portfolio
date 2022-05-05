@@ -6,6 +6,7 @@
 
 body {
   font-family: "Roboto", sans-serif;
+  /*width: 1440px;*/
 }
 a {
   text-decoration: none;
@@ -80,7 +81,7 @@ a {
 }
 
 /* Signin Singup */
-.signinSingup {
+.userControl {
   position: relative;
   display: flex;
   justify-content: space-around;
@@ -88,7 +89,7 @@ a {
   width: 190px;
 }
 
-.signinSingup__container {
+.userControl__container {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -98,28 +99,121 @@ a {
   width: 90px;
   padding: 5px 20px;
   border-radius: 16px;
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
 }
 
-.signinSingup__container + .signinSingup__container {
+.userControl__container + .userControl__container {
   margin-left: 10px;
 }
 
-.signinSingup__signin {
-  color: #fff;
+.userControl--bg-red {
+  background-color: #ee171f;
+}
+.userControl--bg-white {
+  background-color: #fff;
 }
 
-.signinSingup__signup {
+.userControl--txt-white {
+  color: #fff;
+}
+.userControl--txt-black {
   color: #000;
 }
 
-.signinSingup__image {
+.userControl--shadow {
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+}
+
+.userControl__image {
   position: absolute;
   left: 70px;
 }
 
 @media screen and (max-width: 769px) {
+  body {
+    background-color: aquamarine;
+  }
+}
 
+/* Profile Info */
+.profileInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 500px;
+  height: 278px;
+  padding: 23px;
+  border-radius: 35px;
+}
+
+.button--shadow {
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+}
+
+.profileInfo__image img {
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.profileInfo__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 17px;
+}
+
+.profileInfo__title {
+  font-size: 36px;
+  line-height: 42px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.profileInfo__id {
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 500;
+  color: #9c9c9c;
+  margin-bottom: 21px;
+}
+
+.profileInfo__button {
+  width: 106px;
+  height: 23px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 14px;
+  text-align: center;
+  color: #fff;
+  background-color: #ec1d24;
+  padding: 5px 10px;
+  border-radius: 12px;
 }
 
 /* Hero */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  height: 496px;
+  width: 100%;
+  padding: 48px 100px;
+  background-image: url("/tech/img/bg_hero.jpg");
+  background-size: cover;
+  background-position: center;
+
+.heroLeft {
+  display: flex;
+  flex-direction: column;
+}
+
+.heroLeft__title {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 56px;
+  margin-bottom: 25px;
+}
+
+.heroLeft__txt {
+  font-size: 14px;
+  line-height: 16px;
+  color:#fff;
+}
