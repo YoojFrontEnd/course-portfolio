@@ -77,7 +77,6 @@ a {
   font-size: 14px;
   line-height: 16px;
   padding: 8px 14px;
-  border: 1px solid #fff;
 }
 
 /* Signin Singup */
@@ -298,4 +297,72 @@ a {
   font-size: 14px;
   line-height: 16px;
   color: #fff;
+}
+
+.heroRight {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  z-index: 100;
+}
+
+.slider {
+  display: flex;
+  flex-direction: column;
+  width: 720px;
+  padding: 30px;
+  background-color: #000;
+}
+
+.slider__container {
+  z-index: 100;
+  display: flex;
+  align-items: center;
+}
+
+.slider__info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 45px;
+}
+.slider__title {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  color: #fff;
+  margin-bottom: 25px;
+}
+.slider__description {
+  width: 284px;
+  font-size: 14px;
+  line-height: 16px;
+  color: #ffffff;
+  margin-bottom: 13px;
+}
+
+.slider__img {
+}
+
+.slider__details {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 14px;
+  width: 105px;
+  padding: 5px 20px;
+  border-radius: 16px;
+}
+
+.slider__buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.buttons__item {
+  padding: 5px;
 }
