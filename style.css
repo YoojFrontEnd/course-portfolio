@@ -190,16 +190,14 @@ a {
 
 /* Hero */
 .hero {
-  background-image: url("img/bg_hero.jpg");
-}
-
-.hero__container {
   display: flex;
   justify-content: space-between;
   height: 496px;
   width: 100%;
   padding: 48px 100px;
+  background-image: url("img/bg_hero.jpg");
   background-color: rgba(0, 0, 0, 0.75);
+  filter: blur(6px);
 }
 
 .heroLeft {
