@@ -193,6 +193,7 @@ a {
   height: 496px;
   width: 100%;
   background-color: #000;
+  overflow: hidden;
 }
 
 .hero__background-image {
@@ -211,7 +212,6 @@ a {
   display: flex;
   justify-content: space-between;
   padding: 48px 100px;
-  overflow:hidden;
 }
 
 .heroLeft {
