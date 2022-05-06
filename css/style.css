@@ -50,8 +50,8 @@ a {
 }
 
 /* Nav */
-.nav {
-}
+/*.nav {
+}*/
 
 .nav__container {
   display: flex;
@@ -64,9 +64,9 @@ a {
   display: flex;
   list-style: none;
 }
-.nav__item {
-  /*display: inline-block;*/
-}
+/*.nav__item {
+
+}*/
 .nav__item + .nav__item {
   margin-left: 40px;
 }
@@ -77,7 +77,6 @@ a {
   font-size: 14px;
   line-height: 16px;
   padding: 8px 14px;
-  border: 1px solid #fff;
 }
 
 /* Signin Singup */
@@ -207,7 +206,7 @@ a {
   position: absolute;
   top: 0;
   left: 0;
-  background-image: url("/tech/img/bg_hero.jpg");
+  background-image: url("img/bg_hero.jpg");
   background-size: cover;
   background-position: center;
   opacity: 0.25;
@@ -235,5 +234,3 @@ a {
   line-height: 16px;
   color: #fff;
 }
-
-.hero
