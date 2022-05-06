@@ -5,8 +5,9 @@
 }
 
 body {
-  font-family: "Roboto", sans-serif;
   font-family: "Roboto Condensed", sans-serif;
+  width: 1440px;
+  margin: 0 auto;
 }
 a {
   text-decoration: none;
@@ -194,7 +195,7 @@ a {
   height: 496px;
   width: 100%;
   background-color: #000;
-  overflow:hidden;
+  overflow: hidden;
 }
 
 .hero__background-image {
@@ -362,4 +363,38 @@ a {
 
 .buttons__item {
   padding: 5px;
+}
+
+/* Latest Releases */
+.latestReleases {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 184px 30px;
+}
+
+.latestReleases__title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 42px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000;
+  margin-bottom: 62px;
+}
+
+.latestReleases__list-top,
+.latestReleases__list-bottom {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  margin-bottom: 60px;
+}
+.latestReleases__item-top + .latestReleases__item-top {
+  margin-left: 48px;
+}
+
+.latestReleases__item-bottom + .latestReleases__item-bottom {
+  margin-left: 60px;
 }
