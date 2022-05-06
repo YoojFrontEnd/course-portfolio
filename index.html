@@ -1,13 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Index</title>
-    <link rel="stylesheet" href="reset.css"/>
-    <link rel="stylesheet" href="style.css"/>
-  </head>
-  <body>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Index</title>
+  <link rel="stylesheet" href="reset.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="head selectable">
+    <!-- Logo -->
+    <div class="logo selectable">
+      <div class="logo__container">
+        <a class="logo__link" href="#">MARVEL</a>
+      </div>
+    </div>
+    <!-- Nav -->
+    <nav class="nav selectable">
+      <div class="nav__container">
+        <div class="nav__list">
+          <div class="nav__item"><a href="#news" class="nav__link">News</a></div>
+          <div class="nav__item"><a href="#searies" class="nav__link">Searies</a></div>
+          <div class="nav__item"><a href="#character" class="nav__link">Character</a></div>
+        </div>
+      </div>
+    </nav>
+    <!-- Signin Singup -->
+    <div class="userControl selectable">
+      <a class="userControl__container userControl--bg-red userControl--txt-white" href="#signin">Signin</a>
+      <img class="userControl__image" src="/tech/img/spiderman.png" alt="spiderman">
+      <a class="userControl__container userControl--bg-white userControl--txt-black" href="#signup">Signup</a>
+    </div>
+  </div>
+  <!-- Hero -->
+
+  <div class="hero selectable">
+    <div class="heroLeft selectable">
+      <div class="heroLeft__title">All Marvel Comics in one place</div>
+      <div class="heroLeft__txt">Welcome to Super-Heroes Shop specialized in Marvel Comics. You will find in the
+        shelves of our shop all your favorite super heroes: Spider-Man, Iron Man, Avengers, X-men, Fanstastic 4...
+      </div>
+      <div class="heroLeft__search">
+        <input type="search">
+      </div>
+      <div class="heroLeft__citation">
+        <div class="citation__message">“With great power comes great responsibility”</div>
+        <div class="citation__author">Benjamin Parker (aka Uncle Ben)</div>
+      </div>
+    </div>
+    <div class="heroRight"></div>
+  </div>
+  <!-- Portfolio -->
+  <div class="profileInfo button--shadow selectable">
+    <div class="profileInfo__image"><img src="/tech/img/avatar.png" alt="user"></div>
+    <div class="profileInfo__info">
+      <div class="profileInfo__title">Yoann TERUEL</div>
+      <div class="profileInfo__id">#1651651651465</div>
+      <div class="profileInfo__button button--shadow">Edit my profile</div>
+    </div>
+  </div>
+
+</body>
+
 </html>
