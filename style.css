@@ -32,7 +32,8 @@ a {
 }
 
 /* Logo */
-.logo {
+.logo,
+.footer__logo {
   background-color: #ec1d24;
   border: 2px solid #fff;
   padding: 8px 10px;
@@ -386,15 +387,144 @@ a {
 
 .latestReleases__list-top,
 .latestReleases__list-bottom {
+  position: relative;
   display: flex;
   align-items: stretch;
   justify-content: space-between;
   margin-bottom: 60px;
 }
+
 .latestReleases__item-top + .latestReleases__item-top {
   margin-left: 48px;
 }
 
 .latestReleases__item-bottom + .latestReleases__item-bottom {
   margin-left: 60px;
+}
+
+.latestReleases__list-top {
+  border-radius: 35px;
+}
+
+.latestReleases__rating {
+  left: 9px;
+  bottom: 61px;
+  position: absolute;
+  width: 71px;
+  height: 39px;
+  background: #fff;
+  border-radius: 0px 20px 0px 35px;
+  color: red;
+}
+
+/* Characters */
+.characters {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.characters__title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 42px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000;
+  margin-bottom: 62px;
+}
+.characters__list {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.characters__item + .characters__item {
+  margin-left: 25px;
+}
+
+.characters__heroName {
+  position: absolute;
+  bottom: 2px;
+  width: 196px;
+  padding: 25px 20px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(25px);
+  border-radius: 35px;
+}
+
+.characters__link {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
+  color: #fff;
+}
+
+/* Footer */
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 90px 325px 90px 180px;
+}
+
+.footer__left {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__logo {
+  margin-bottom: 22px;
+}
+
+.footer__copywrite {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  color: #7c7c7c;
+  margin-bottom: 22px;
+}
+
+.footer__socialicons {
+  display: flex;
+  align-items: center;
+}
+
+.socialicons__link + .socialicons__link {
+  margin-left: 17px;
+}
+
+.footer__right {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__right-menu {
+}
+
+.menu__title {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+  color: #000000;
+  margin-bottom: 13px;
+}
+
+.menu__link {
+  font-size: 12px;
+  line-height: 14px;
+  color: #000000;
+}
+
+.menu__item + .menu__item {
+  padding-top: 13px;
+}
+
+.footer__right-menu + .footer__right-menu {
+  margin-left: 55px;
 }
