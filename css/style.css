@@ -402,7 +402,6 @@ a {
 }
 
 .latestReleases__list-top {
-
 }
 
 .latestReleases__item-top {
@@ -457,30 +456,95 @@ a {
   justify-content: space-between;
 }
 .collection__title {
-  flex-grow: 5;
   font-weight: 700;
   font-size: 14px;
   line-height: 16px;
   color: #000;
-  padding-bottom: 5px;
 }
 .collection__collection {
-  flex-grow: 0;
   font-size: 12px;
   line-height: 14px;
   color: #474747;
-  float: left;
 }
 
 .collection__cost {
-  flex-grow: 0;
   font-weight: 700;
   font-size: 14px;
   line-height: 16px;
   text-align: right;
-  float: left;
   color: #ee171f;
 }
+
+/* Hover for Latest releases */
+.latestReleases__hover {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  left: -4px;
+  bottom: 0;
+  width: 241px;
+  height: 197px;
+  padding: 19px 12px 6px 12px;
+  background: linear-gradient(180deg, rgba(77, 77, 77, 0.83) 0%, #000000 100%);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  transition: 0.2s all ease;
+  transform: translate(0, 10px);
+  opacity: 0;
+}
+
+.latestReleases__item-top:hover .latestReleases__hover {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+.hover__description {
+  font-size: 12px;
+  line-height: 14px;
+  height: 97px;
+  color: #fff;
+}
+
+.latestReleases__hover .collection__title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  color: #fff;
+  margin-bottom: 6px;
+}
+.latestReleases__hover .collection__collection {
+  font-size: 12px;
+  line-height: 14px;
+  color: #b6b6b6;
+}
+
+.hover__collection {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
+}
+
+.hover__detail {
+  display: flex;
+  flex-direction: column;
+}
+
+.hover__detail a {
+  margin-top: 9px;
+}
+.collection__title {
+}
+
+.collection__collection {
+}
+
+.hover__row {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* END Hover for Latest releases */
 
 /* Characters */
 .characters {
