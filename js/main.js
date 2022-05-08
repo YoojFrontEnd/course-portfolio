@@ -1,14 +1,15 @@
-let button = document.getElementById('open');
-let close = document.getElementById('close');
-let modal = document.getElementById('modal');
+let openModal = document.getElementById('userControlModalOpen');
+let closeModal = document.getElementById('userControlModalClose');
+let modalModal = document.getElementById('userControlModal');
 
-button.addEventListener('click', function (event) {
+open.addEventListener('click', function (event) {
   event.preventDefault();
-  console.log(button)
+  console.log(openModal)
   modal.style.display = 'block';
 });
 
 close.addEventListener('click', function (event) {
   event.preventDefault();
+  console.log(closeModal)
   modal.style.display = 'none';
 });

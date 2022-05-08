@@ -38,34 +38,50 @@
       <img class="userControl__image" src="/tech/img/spiderman.png" alt="spiderman">
       <a class="userControl__container userControl--bg-white userControl--txt-black" href="#signup">Signup</a>
     </div>
-    <!-- Modal -->
-    <div class="userControlModal" id="userControlModal">
-      <div class="userControlModal__backdrop"></div>
-      <div class="userControlModal__container">
-        <div class="userControlModal__left">
-          <div class="userControlModal__body">
-            <a class="userControlModal__close" id="userControlModalClose"><img src="/img/close.png" alt="close"></a>
-            <div class="userControlModal__title">Signup</div>
-            <div class="userControlModal__subTitle">Already have an account? <a href="#">Sign in</a></div>
-            <form class="userControlModal__form">
-              <div class="form__nickname"><input type="text" name="nickname" placeholder="Your Nickname" required /></div>
-              <div class="form__firstname"><input type="text" name="firstname" placeholder="First Name" required /></div>
-              <div class="form__lasttname"><input type="text" name="lastname" placeholder="Last Name" required /></div>
-              <div class="form__email"><input type="email" name="email" placeholder="E-mail" required /></div>
-              <div class="form__password"><input type="password" name="password" placeholder="Password" required /></div>
-              <div class="form__submit"><input type="submit" name="submit" value="Register" /><a href="#">Register</a></div>
-              <div class="form__checkbox"><input type="checkbox" name="checkbox" required />
-                <label for="checkbox">I have read and agree to the <a href="#">Terms of Service</a></label>
-              </div>
-            </form>
-          </div>
-        </div>
-        <div class="userControlModal_right"></div>
-      </div>
-    </div> <!-- END Modal -->
-
   </div>
-  <script src="../index.js" type="text/javascript"></script>
+  <!-- Modal -->
+  <div id="userControlModal" class="userControlModal selectable">
+    <div class="userControlModal__backdrop"></div>
+    <div class="userControlModal__container">
+      <div class="userControlModal__left">
+        <div class="userModalForm">
+          <a id="userControlModalClose" class="userModalForm__close"><img src="/img/close.png" alt="close"></a>
+          <div class="userModalForm__title">Signup</div>
+          <div class="userModalForm__subTitle">Already have an account? <a href="#">Sign in</a></div>
+          <form class="userModalForm__form">
+            <div class="form__nickname"><input type="text" name="nickname" placeholder="Your Nickname" required /></div>
+            <div class="form__firstname"><input type="text" name="firstname" placeholder="First Name" required /></div>
+            <div class="form__lasttname"><input type="text" name="lastname" placeholder="Last Name" required /></div>
+            <div class="form__email"><input type="email" name="email" placeholder="E-mail" required /></div>
+            <div class="form__password"><input type="password" name="password" placeholder="Password" required /></div>
+            <div class="form__submit"><input type="submit" name="submit" value="Register" /><a href="#">Register</a></div>
+            <div class="form__checkbox"><input type="checkbox" name="checkbox" required />
+              <label class="form__checkbox-label" for="checkbox">I have read and agree to the <a href="#">Terms of Service</a></label>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="userControlModal_right"></div>
+    </div>
+  </div> <!-- END Modal -->
+
+  <script>
+    let open = document.getElementById('userControlModalOpen');
+    let close = document.getElementById('userControlModalClose');
+    let modal = document.getElementById('userControlModal');
+
+    open.addEventListener('click', function (event) {
+      event.preventDefault();
+      console.log(open)
+      modal.style.display = 'block';
+    });
+
+    close.addEventListener('click', function (event) {
+      event.preventDefault();
+      console.log(close)
+      modal.style.display = 'none';
+    });
+  </script>
 </body>
 
 </html>
