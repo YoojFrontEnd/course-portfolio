@@ -36,20 +36,20 @@
             </div>
           </div>
         </nav>
-        
+
         <!-- Signin Singup -->
         <div class="userControl selectable">
-          <a id="open" class="userControl__container userControl--bg-red userControl--txt-white" href="#signin">Signin</a>
+          <a id="userControlModalOpen" class="userControl__container userControl--bg-red userControl--txt-white" href="#signin">Signin</a>
           <img class="userControl__image" src="/tech/img/spiderman.png" alt="spiderman">
           <a class="userControl__container userControl--bg-white userControl--txt-black" href="#signup">Signup</a>
         </div>
         <!-- Modal -->
-        <div id="modal" class="userControlModal selectable">
+        <div id="userControlModal" class="userControlModal selectable">
           <div class="userControlModal__backdrop"></div>
           <div class="userControlModal__container">
             <div class="userControlModal__left">
               <div class="userControlModal__body">
-                <a id="close" class="userControlModal__close"><img src="/img/close.png" alt="close"></a>
+                <a id="userControlModalClose" class="userControlModal__close"><img src="/img/close.png" alt="close"></a>
                 <div class="userControlModal__title">Signup</div>
                 <div class="userControlModal__subTitle">Already have an account? <a href="#">Sign in</a></div>
                 <form class="userControlModal__form">
@@ -60,7 +60,7 @@
                   <div class="form__password"><input type="password" name="password" placeholder="Password" required /></div>
                   <div class="form__submit"><input type="submit" name="submit" value="Register" /><a href="#">Register</a></div>
                   <div class="form__checkbox"><input type="checkbox" name="checkbox" required />
-                    <label for="checkbox">I have read and agree to the <a href="#">Terms of Service</a></label>
+                    <label class="form__checkbox-label" for="checkbox">I have read and agree to the <a href="#">Terms of Service</a></label>
                   </div>
                 </form>
               </div>
