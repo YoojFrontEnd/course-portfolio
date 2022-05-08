@@ -13,6 +13,9 @@ a {
   text-decoration: none;
   color: #fff;
 }
+a:hover {
+  border-bottom: 2px solid #000;
+}
 .bg-color-red {
   background-color: #ec1d24;
 }
@@ -51,6 +54,7 @@ a {
   text-transform: uppercase;
 }
 
+
 /* Nav */
 .nav {
 }
@@ -79,6 +83,11 @@ a {
   font-size: 14px;
   line-height: 16px;
   padding: 8px 14px;
+}
+
+.nav__link:hover{
+  border-bottom: 1px solid red;
+ы
 }
 
 /* Signin Singup */
@@ -131,10 +140,14 @@ a {
 
 /* SignIn form */
 
-.userControlModalIn,
+.userControlModalIn {
+  display: none;
+}
+
 .userControlModalUp {
   display: none;
 }
+
 
 .userControlModalIn__backdrop,
 .userControlModalUp__backdrop {

@@ -133,7 +133,7 @@ a {
 
 .userControlModalIn,
 .userControlModalUp {
-  display: none;
+  display: block;
 }
 
 
