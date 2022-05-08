@@ -11,8 +11,7 @@
   <title>Base Tech</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;500;600;700&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -37,12 +36,38 @@
             </div>
           </div>
         </nav>
+        
         <!-- Signin Singup -->
         <div class="userControl selectable">
-          <a class="userControl__container userControl--bg-red userControl--txt-white" href="#signin">Signin</a>
+          <a id="open" class="userControl__container userControl--bg-red userControl--txt-white" href="#signin">Signin</a>
           <img class="userControl__image" src="/tech/img/spiderman.png" alt="spiderman">
           <a class="userControl__container userControl--bg-white userControl--txt-black" href="#signup">Signup</a>
         </div>
+        <!-- Modal -->
+        <div id="modal" class="userControlModal selectable">
+          <div class="userControlModal__backdrop"></div>
+          <div class="userControlModal__container">
+            <div class="userControlModal__left">
+              <div class="userControlModal__body">
+                <a id="close" class="userControlModal__close"><img src="/img/close.png" alt="close"></a>
+                <div class="userControlModal__title">Signup</div>
+                <div class="userControlModal__subTitle">Already have an account? <a href="#">Sign in</a></div>
+                <form class="userControlModal__form">
+                  <div class="form__nickname"><input type="text" name="nickname" placeholder="Your Nickname" required /></div>
+                  <div class="form__firstname"><input type="text" name="firstname" placeholder="First Name" required /></div>
+                  <div class="form__lasttname"><input type="text" name="lastname" placeholder="Last Name" required /></div>
+                  <div class="form__email"><input type="email" name="email" placeholder="E-mail" required /></div>
+                  <div class="form__password"><input type="password" name="password" placeholder="Password" required /></div>
+                  <div class="form__submit"><input type="submit" name="submit" value="Register" /><a href="#">Register</a></div>
+                  <div class="form__checkbox"><input type="checkbox" name="checkbox" required />
+                    <label for="checkbox">I have read and agree to the <a href="#">Terms of Service</a></label>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="userControlModal_right"></div>
+          </div>
+        </div> <!-- END Modal -->
       </div>
 
       <!-- Hero -->
@@ -77,8 +102,7 @@
                   <div class="slider__description">Dernier round pour déterminer qui parmi les Avengers sera le nouvel
                     hôte du Phénix, dans les deux derniers chapitres de la saga Voici le Phénix ! Et un Donald Blake
                     devenu fouaffronte Jane Foster, son ancien amour, devenue Valkyrie !</div>
-                  <a class="slider__details userControl--bg-red userControl--txt-white userControl--shadow">See
-                    details</a>
+                  <a class="slider__details userControl--bg-red userControl--txt-white userControl--shadow">See details</a>
                 </div>
               </div>
               <div class="slider__buttons">
@@ -122,8 +146,7 @@
                 </div>
                 <div class="hover__detail">
                   <div class="collection__cost">$ 17.00</div>
-                  <a class="slider__details userControl--bg-red userControl--txt-white userControl--shadow"
-                    href="#seedetail">See details</a>
+                  <a class="slider__details userControl--bg-red userControl--txt-white userControl--shadow" href="#seedetail">See details</a>
                 </div>
               </div>
             </div>
@@ -154,8 +177,7 @@
                 </div>
                 <div class="hover__detail">
                   <div class="collection__cost">$ 21.00</div>
-                  <a class="slider__details userControl--bg-red userControl--txt-white userControl--shadow"
-                    href="#seedetail">See details</a>
+                  <a class="slider__details userControl--bg-red userControl--txt-white userControl--shadow" href="#seedetail">See details</a>
                 </div>
               </div>
             </div>
@@ -186,8 +208,7 @@
                 </div>
                 <div class="hover__detail">
                   <div class="collection__cost">$ 15.00</div>
-                  <a class="slider__details userControl--bg-red userControl--txt-white userControl--shadow"
-                    href="#seedetail">See details</a>
+                  <a class="slider__details userControl--bg-red userControl--txt-white userControl--shadow" href="#seedetail">See details</a>
                 </div>
               </div>
             </div>
@@ -218,8 +239,7 @@
                 </div>
                 <div class="hover__detail">
                   <div class="collection__cost">$ 16.00</div>
-                  <a class="slider__details userControl--bg-red userControl--txt-white userControl--shadow"
-                    href="#seedetail">See details</a>
+                  <a class="slider__details userControl--bg-red userControl--txt-white userControl--shadow" href="#seedetail">See details</a>
                 </div>
               </div>
             </div>
@@ -277,12 +297,9 @@
           </div>
           <p class="footer__copywrite">Copyright 2022 Super-Heroes Shop</p>
           <div class="footer__socialicons">
-            <a class="socialicons__link" href="#instagram" title="instagram" target="_blank"><img
-                src="/img/instargam.svg" alt=""></a>
-            <a class="socialicons__link" href="#twitter" title="twitter" target="_blank"><img src="/img/twitter.svg"
-                alt=""></a>
-            <a class="socialicons__link" href="#facebook" title="facebook" target="_blank"><img src="/img/facebook.svg"
-                alt=""></a>
+            <a class="socialicons__link" href="#instagram" title="instagram" target="_blank"><img src="/img/instargam.svg" alt=""></a>
+            <a class="socialicons__link" href="#twitter" title="twitter" target="_blank"><img src="/img/twitter.svg" alt=""></a>
+            <a class="socialicons__link" href="#facebook" title="facebook" target="_blank"><img src="/img/facebook.svg" alt=""></a>
           </div>
         </div>
         <div class="footer__right">
@@ -392,8 +409,7 @@
                 <div class="slider__description">Dernier round pour déterminer qui parmi les Avengers sera le nouvel
                   hôte du Phénix, dans les deux derniers chapitres de la saga Voici le Phénix ! Et un Donald Blake
                   devenu fouaffronte Jane Foster, son ancien amour, devenue Valkyrie !</div>
-                <a class="slider__details userControl--bg-red userControl--txt-white userControl--shadow"
-                  href="#seedetail">See details</a>
+                <a class="slider__details userControl--bg-red userControl--txt-white userControl--shadow" href="#seedetail">See details</a>
               </div>
             </div>
             <div class="slider__buttons">

@@ -129,6 +129,144 @@ a {
   left: 70px;
 }
 
+/* SignIn form */
+
+.userControlModal {
+  display: none;
+  transition: 0.3s all ease;
+}
+
+.userControlModal__backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: 0.3s all ease;
+}
+
+.userControlModal__container {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  width: 688px;
+  height: 342px;
+  background-color: #c4c4c4;
+  border-radius: 20px;
+  top: 20%;
+  bottom: 30%;
+  right: 30%;
+  left: 30%;
+  overflow: hidden;
+}
+.userControlModal__left {
+  width: 50%;
+  background-color: #fff;
+}
+
+.userControlModal__right {
+  width: 50%;
+  background-color: #c4c4c4;
+}
+
+.userControlModal__body {
+  padding: 35px 44px;
+  overflow: auto;
+}
+
+.userControlModal__close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.5em 1em;
+  cursor: pointer;
+  filter: invert();
+}
+
+.userControlModal__title {
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 42px;
+  padding-bottom: 8px;
+  text-align: center;
+}
+
+.userControlModal__subTitle {
+  font-size: 12px;
+  line-height: 14px;
+  text-align: center;
+  padding: 8px 15px;
+}
+
+.userControlModal__subTitle a {
+  text-decoration-line: underline;
+  color: #0093b4;
+  margin-bottom: 8px;
+}
+
+input {
+  margin-bottom: 8px;
+  width: 100%;
+  height: 28px;
+  padding: 7px 10px;
+  background: #ffffff;
+  border: 0.4px solid #dbdbdb;
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.25);
+  border-radius: 14px;
+  vertical-align: middle;
+}
+
+input[name="nickname"] {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+  color: #000000;
+}
+
+input[name="firstname"],
+input[name="lastname"],
+input[name="email"],
+input[name="password"] {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+  color: #868686;
+  background-color: #dbdbdb;
+  box-shadow: none;
+}
+
+input[name="firstname"],
+input[name="lastname"] {
+  width: 49%;
+}
+
+input[name="submit"] {
+  background-color: #ee171f;
+  color: #fff;
+}
+
+input[name="checkbox"] {
+  width: 16px;
+  height: 16px;
+  margin-right: 5px;
+  border-radius: 5px;
+  background-color: #dbdbdb;
+  margin-bottom: 0;
+}
+
+.form__checkbox > label[for="checkbox"] {
+  padding: 9px 0x;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.form__checkbox a {
+  text-decoration-line: underline;
+  color: #0093b4;
+}
+
+/* END SignIn form */
 @media screen and (max-width: 769px) {
   body {
     background-color: aquamarine;
@@ -431,7 +569,7 @@ a {
   height: 39px;
   padding: 10px 13px;
   background: #fff;
-  border-radius: 0px 20px 0px 0px;
+  border-radius: 0px 20px 0px 35px;
 }
 
 .rating__star img {
