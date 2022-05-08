@@ -34,13 +34,13 @@
     </nav>
     <!-- Signin Singup -->
     <div class="userControl selectable">
-      <a id="userControlModalOpenIn" data-toggle="modal" class="userControl__container userControl--bg-red userControl--txt-white" href="#signin">Signin</a>
+      <a id="userControlModalOpenIn" class="userControl__container userControl--bg-red userControl--txt-white" href="#signin">Signin</a>
       <img class="userControl__image" src="/tech/img/spiderman.png" alt="spiderman">
-      <a id="userControlModalOpenUp" data-toggle="modal" class="userControl__container userControl--bg-white userControl--txt-black" href="#signup">Signup</a>
+      <a id="userControlModalOpenUp" class="userControl__container userControl--bg-white userControl--txt-black" href="#signup">Signup</a>
     </div>
   </div>
   <!-- Modal SignIn -->
-  <div id="userControlModalIn" class="userControlModal selectable" style="display: none;">
+  <div id="userControlModalIn" class="userControlModalIn selectable">
     <div class="userControlModalIn__backdrop"></div>
     <div class="userControlModalIn__container">
       <div class="userControlModalIn__left">
@@ -66,7 +66,7 @@
     </div>
   </div> <!-- END Modal -->
   <!-- Modal SignUp -->
-  <div id="userControlModalUp" class="userControlModal selectable" style="display: none;">
+  <div id="userControlModalUp" class="userControlModalUp selectable">
     <div class="userControlModalUp__backdrop"></div>
     <div class="userControlModalUp__container">
       <div class="userControlModalUp__left">
@@ -93,10 +93,8 @@
     openModalIn.addEventListener('click', function (event) {
       event.preventDefault();
       console.log(openModalIn)
-      if (event.target.dataset.toggle === 'modal') {
         userControlModalIn.style.display = 'block'
         userControlModalIn.style.transition = "all 2s"
-      }
     });
 
     closeModalIn.addEventListener('click', function (event) {
