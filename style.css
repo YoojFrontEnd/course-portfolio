@@ -131,11 +131,13 @@ a {
 
 /* SignIn form */
 
-.userControlModal {
+.userControlModalIn,
+.userControlModalUp {
   display: none;
 }
 
-.userControlModal__backdrop {
+.userControlModalIn__backdrop,
+.userControlModalUp__backdrop {
   position: fixed;
   top: 0;
   right: 0;
@@ -144,7 +146,8 @@ a {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-.userControlModal__container {
+.userControlModalIn__container,
+.userControlModalUp__container {
   position: fixed;
   display: flex;
   justify-content: space-between;
@@ -158,16 +161,24 @@ a {
   left: 30%;
   overflow: hidden;
 }
-.userControlModal__left {
+
+.userControlModalUp__container {
+  height: 262px;
+}
+
+.userControlModalIn__left,
+.userControlModalUp__left {
   width: 50%;
   background-color: #fff;
 }
 
-.userControlModal__right {
+.userControlModalIn__right,
+.userControlModalUp__right {
   width: 50%;
   background-color: #c4c4c4;
 }
 
+/* form */
 .userModalForm {
   padding: 35px 44px;
   overflow: auto;
