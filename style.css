@@ -160,6 +160,7 @@ a {
   right: 30%;
   left: 30%;
   overflow: hidden;
+  z-index: 99;
 }
 
 .userControlModalUp__container {

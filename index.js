@@ -5,7 +5,8 @@ let modalModalIn = document.getElementById('userControlModalIn');
 openModalIn.addEventListener('click', function (event) {
   event.preventDefault();
   console.log(openModalIn)
-  userControlModalIn.style.display = 'block';
+  userControlModalIn.style.display = 'block'
+  userControlModalIn.style.transition = "all 2s"
 });
 
 closeModalIn.addEventListener('click', function (event) {
