@@ -5,6 +5,10 @@
   z-index: 999999;
   margin-bottom: 20px;
 }
+.tech__header input{
+width: auto;
+margin: 5px;
+}
 
 .tech {
   display: flex;
@@ -23,20 +27,17 @@
 .tech__half {
   width: 50%;
 }
-.tech__320 {
-  width: 320px;
+.tech__540 {
+  width: 540px;
 }
-.tech__480 {
-  width: 480px;
+.tech__720 {
+  width: 720px;
 }
-.tech__769 {
-  width: 769px;
+.tech__960 {
+  width: 960px;
 }
-.tech__1280 {
-  width: 1280px;
-}
-.tech__1024 {
-  width: 1024px;
+.tech__1140 {
+  width: 1140px;
 }
 
 .techBlock__mobile iframe {

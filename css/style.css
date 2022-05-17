@@ -6,12 +6,10 @@
 
 body {
   font-family: "Roboto Condensed", sans-serif;
-  width: 1440px;
   margin: 0 auto;
 }
 a {
   text-decoration: none;
-  color: #fff;
 }
 .bg-color-red {
   background-color: #ec1d24;
@@ -20,8 +18,19 @@ a {
   background-color: #fff;
 }
 
-/* Head */
-.head {
+/* +++++++++++++++++++++++++++++++++++ */
+/*               Wrapper               */
+/* +++++++++++++++++++++++++++++++++++ */
+.wrapper {
+  width: 1440px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+/* +++++++++++++++++++++++++++++++++++ */
+/*               Header                */
+/* +++++++++++++++++++++++++++++++++++ */
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -31,17 +40,20 @@ a {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-/* Logo */
-.logo,
-.footer__logo {
+/* +++++++++++++++++++++++++++++++++++ */
+/*               Logo                  */
+/* +++++++++++++++++++++++++++++++++++ */
+.logo {
+  max-width: max-content;
   background-color: #ec1d24;
   border: 2px solid #fff;
-  padding: 8px 10px;
 }
-.logo__container {
+
+.logo__body {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
+  padding: 8px 10px;
 }
 
 .logo__link {
@@ -49,28 +61,32 @@ a {
   font-weight: 500;
   line-height: 24px;
   text-transform: uppercase;
+  color: #fff;
+  cursor: pointer;
 }
 
-/* Nav */
+/* +++++++++++++++++++++++++++++++++++ */
+/*                Nav                  */
+/* +++++++++++++++++++++++++++++++++++ */
 .nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #222;
+  max-width: max-content;
 }
 
-.nav__container {
+.nav__body {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 15px 20px;
-  background-color: #222;
+  justify-content: center;
+  height: 60px;
 }
+
 .nav__list {
   display: flex;
+  align-items: center;
+  justify-content: center;
   list-style: none;
-}
-.nav__item {
-  /*display: inline-block;*/
-}
-.nav__item + .nav__item {
-  margin-left: 40px;
 }
 
 .nav__link {
@@ -78,19 +94,33 @@ a {
   font-weight: 600;
   font-size: 14px;
   line-height: 16px;
-  padding: 8px 14px;
+  color: #fff;
+  margin: 0 20px;
+  transition: 0.2s all ease;
 }
 
-/* Signin Singup */
-.userControl {
+.nav__link:hover {
+  color: #ec1d24;
+}
+
+/* +++++++++++++++++++++++++++++++++++ */
+/*         Signin / Sighup             */
+/* +++++++++++++++++++++++++++++++++++ */
+.userCtrl {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: max-content;
+}
+
+.userCtrl__body {
   position: relative;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-  width: 190px;
 }
 
-.userControl__container {
+.userCtrl__link {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -98,35 +128,37 @@ a {
   font-weight: 500;
   line-height: 14px;
   width: 90px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   padding: 5px 20px;
   border-radius: 16px;
+  border: 2px solid transparent;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+  transition: 0.2s all ease;
 }
 
-.userControl__container + .userControl__container {
+.userCtrl__link:hover {
+  font-weight: 700;
+  border: 2px solid #222;
+}
+
+.userCtrl__image {
+  position: absolute;
+  left: 73px;
+}
+
+.userCtrl__link + .userCtrl__link {
   margin-left: 10px;
 }
 
-.userControl--bg-red {
+.userCtrl__link--singin {
   background-color: #ee171f;
-}
-.userControl--bg-white {
-  background-color: #fff;
-}
-
-.userControl--txt-white {
   color: #fff;
 }
-.userControl--txt-black {
+
+.userCtrl__link--singup {
+  background-color: #fff;
   color: #000;
-}
-
-.userControl--shadow {
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
-}
-
-.userControl__image {
-  position: absolute;
-  left: 70px;
 }
 
 /* SignIn form */
@@ -135,7 +167,6 @@ a {
 .userControlModalUp {
   display: block;
 }
-
 
 .userControlModalIn__backdrop,
 .userControlModalUp__backdrop {

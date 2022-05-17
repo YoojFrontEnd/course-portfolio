@@ -1,10 +1,10 @@
 function cloneElement(element, iframe = false) {
   const newElement = element.cloneNode(true);
-  if (iframe){
+  if (iframe) {
     const iframeElement = document.createElement('iframe');
-    iframe.src="about:blank";
+    iframe.src = "about:blank";
     iframeElement.srcdoc =
-`<!DOCTYPE html>
+      `<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8"/>
@@ -31,7 +31,7 @@ updateTechParams = (techParams) => {
 
 function init() {
 
-  const techParams = JSON.parse(localStorage.getItem('techParams')) || {activeElement: '', enabled: false};
+  const techParams = JSON.parse(localStorage.getItem('techParams')) || { activeElement: '', enabled: false };
 
 
   const select = document.createElement('select');
@@ -53,12 +53,20 @@ function init() {
 
   const desktopTech = document.createElement('div');
   desktopTech.className = 'techBlock__desktop';
-  desktopTech.innerHTML = `<div class="techBlock tech__full"></div><div class="techBlock tech__1280"></div><div class="techBlock tech__1024"></div><div class="techBlock__row"><div class="techBlock tech__769"></div><div class="techBlock tech__480"></div><div class="techBlock tech__320"></div></div>`;
+  desktopTech.innerHTML = `<div class="techBlock tech__full"></div>
+  <div class="techBlock tech__1140"></div>
+  <div class="techBlock__row">
+  <div class="techBlock tech__960"></div>
+  <div class="techBlock tech__720"></div>
+  <div class="techBlock tech__540"></div>
+  </div>`;
   const desktopTechBlocks = desktopTech.querySelectorAll('.techBlock');
 
   const mobileTech = document.createElement('div');
   mobileTech.className = 'techBlock__row techBlock__mobile';
-  mobileTech.innerHTML = `<div class="techBlock tech__769"></div><div class="techBlock tech__480"></div><div class="techBlock tech__320"></div>`;
+  mobileTech.innerHTML = `<div class="techBlock tech__960">
+  </div><div class="techBlock tech__720"></div>
+  <div class="techBlock tech__540"></div>`;
   const mobileTechBlocks = mobileTech.querySelectorAll('.techBlock');
 
   document.body.prepend(mobileTech);
@@ -66,11 +74,11 @@ function init() {
   document.body.prepend(techHeader);
 
   const populateElement = (element) => {
-    for (let desktopTechBlock of desktopTechBlocks){
+    for (let desktopTechBlock of desktopTechBlocks) {
       desktopTechBlock.innerHTML = '';
       desktopTechBlock.append(cloneElement(element));
     }
-    for (let mobileTechBlock of mobileTechBlocks){
+    for (let mobileTechBlock of mobileTechBlocks) {
       mobileTechBlock.innerHTML = '';
       mobileTechBlock.append(cloneElement(element, true));
     }
@@ -78,7 +86,7 @@ function init() {
 
   const handleSelectChange = (value) => {
     let selectedOption = null;
-    for (selectedOption of select.children){
+    for (selectedOption of select.children) {
       if (selectedOption.innerText === value)
         break
     }
@@ -123,4 +131,3 @@ function init() {
 }
 
 init();
-

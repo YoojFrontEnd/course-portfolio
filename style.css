@@ -4,27 +4,37 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: "Roboto Condensed", sans-serif;
-  width: 1440px;
-  margin: 0 auto;
+.clearfix:after,
+.clearfix:before {
+  content: "";
+  display: table;
 }
-a {
-  text-decoration: none;
-  color: #fff;
-}
-a:hover {
-  border-bottom: 2px solid #000;
-}
-.bg-color-red {
-  background-color: #ec1d24;
-}
-.bg-color-white {
-  background-color: #fff;
+.clearfix:after {
+  clear: both;
 }
 
-/* Head */
-.head {
+body {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: calc(16px + (20 - 16) * (100vw - 320px) / (1280 - 320));
+}
+
+a {
+  text-decoration: none;
+}
+
+/* +++++++++++++++++++++++++++++++++++ */
+/*               Wrapper               */
+/* +++++++++++++++++++++++++++++++++++ */
+.wrapper {
+  width: 1440px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+/* +++++++++++++++++++++++++++++++++++ */
+/*               Header                */
+/* +++++++++++++++++++++++++++++++++++ */
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -33,18 +43,19 @@ a:hover {
   background-color: #222;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
-
-/* Logo */
-.logo,
-.footer__logo {
+/* +++++++++++++++++++++++++++++++++++ */
+/*               Logo                  */
+/* +++++++++++++++++++++++++++++++++++ */
+.logo {
+  max-width: max-content;
   background-color: #ec1d24;
   border: 2px solid #fff;
-  padding: 8px 10px;
 }
-.logo__container {
+.logo__body {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
+  padding: 8px 10px;
 }
 
 .logo__link {
@@ -52,29 +63,33 @@ a:hover {
   font-weight: 500;
   line-height: 24px;
   text-transform: uppercase;
+  color: #fff;
+  cursor: pointer;
 }
 
-
-/* Nav */
+/* +++++++++++++++++++++++++++++++++++ */
+/*                Nav                  */
+/* +++++++++++++++++++++++++++++++++++ */
 .nav {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #222;
+  max-width: max-content;
 }
 
-.nav__container {
+.nav__body {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 15px 20px;
-  background-color: #222;
+  justify-content: center;
+  height: 60px;
 }
+
 .nav__list {
   display: flex;
+  align-items: center;
+  justify-content: center;
   list-style: none;
-}
-.nav__item {
-  /*display: inline-block;*/
-}
-.nav__item + .nav__item {
-  margin-left: 40px;
 }
 
 .nav__link {
@@ -82,24 +97,33 @@ a:hover {
   font-weight: 600;
   font-size: 14px;
   line-height: 16px;
-  padding: 8px 14px;
+  color: #fff;
+  margin: 0 20px;
+  transition: 0.2s all ease;
 }
 
-.nav__link:hover{
-  border-bottom: 1px solid red;
-ы
+.nav__link:hover {
+  color: #ec1d24;
 }
 
-/* Signin Singup */
-.userControl {
+/* +++++++++++++++++++++++++++++++++++ */
+/*         Signin / Sighup             */
+/* +++++++++++++++++++++++++++++++++++ */
+.userCtrl {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: max-content;
+}
+
+.userCtrl__body {
   position: relative;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-  width: 190px;
 }
 
-.userControl__container {
+.userCtrl__link {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -107,39 +131,60 @@ a:hover {
   font-weight: 500;
   line-height: 14px;
   width: 90px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   padding: 5px 20px;
   border-radius: 16px;
+  border: 2px solid transparent;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+  transition: 0.2s all ease;
 }
 
-.userControl__container + .userControl__container {
+.userCtrl__link:hover {
+  font-weight: 700;
+  border: 2px solid #222;
+}
+
+.userCtrl__image {
+  position: absolute;
+  left: 73px;
+}
+
+.userCtrl__link + .userCtrl__link {
   margin-left: 10px;
 }
 
-.userControl--bg-red {
+.userCtrl__link--singin {
   background-color: #ee171f;
-}
-.userControl--bg-white {
-  background-color: #fff;
-}
-
-.userControl--txt-white {
   color: #fff;
 }
-.userControl--txt-black {
+
+.userCtrl__link--singup {
+  background-color: #fff;
   color: #000;
 }
 
-.userControl--shadow {
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+.header__burger {
+  display: none;
+  filter: invert();
+  transition: 0.5s all ease;
 }
 
-.userControl__image {
-  position: absolute;
-  left: 70px;
+/* Media 720px */
+@media screen and (max-width: 720px) {
+  .nav,
+  .userCtrl {
+    display: none;
+  }
+
+  .header__burger {
+    display: flex;
+  }
 }
 
-/* SignIn form */
-
+/* +++++++++++++++++++++++++++++++++++ */
+/*            Modal                    */
+/* +++++++++++++++++++++++++++++++++++ */
 .userControlModalIn {
   display: none;
 }
@@ -156,6 +201,7 @@ a:hover {
   bottom: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
 }
 
 .userControlModalIn__container,
@@ -172,7 +218,7 @@ a:hover {
   right: 30%;
   left: 30%;
   overflow: hidden;
-  z-index: 99;
+  z-index: 1000;
 }
 
 .userControlModalUp__container {
@@ -230,7 +276,7 @@ a:hover {
 input {
   margin-bottom: 8px;
   width: 100%;
-  height: 28px;
+  /*height: 28px;*/
   padding: 7px 10px;
   background: #ffffff;
   border: 0.4px solid #dbdbdb;
@@ -561,14 +607,8 @@ input[name="checkbox"] {
   margin-left: 60px;
 }
 
-.latestReleases__list-top {
-}
-
 .latestReleases__item-top {
   position: relative;
-}
-
-.latestReleases__item-top img {
   width: 232px;
   height: 352px;
   border-radius: 35px;
@@ -586,12 +626,12 @@ input[name="checkbox"] {
   justify-content: space-between;
   align-items: center;
   left: 0;
-  bottom: 2px;
+  bottom: 0;
   width: 71px;
   height: 39px;
   padding: 10px 13px;
   background: #fff;
-  border-radius: 0px 20px 0px 35px;
+  border-top-right-radius: 20px;
 }
 
 .rating__star img {

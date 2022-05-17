@@ -31,3 +31,18 @@ closeModalUp.addEventListener('click', function (event) {
   console.log(closeModalUp)
   userControlModalUp.style.display = 'none';
 });
+
+//  Burger
+let open = document.getElementById('open')
+let close = document.getElementById('close')
+let modal = document.getElementById('burger')
+
+close.addEventListener('click', function (event) {
+  event.preventDefault()
+  modal.style.display = 'none'
+})
+
+open.addEventListener('click', function (event) {
+  event.preventDefault()
+  burger__modal.style.display = 'flex'
+})
