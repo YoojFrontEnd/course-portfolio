@@ -682,7 +682,7 @@ input[name="checkbox"] {
   flex-direction: column;
   justify-content: space-between;
   left: -4px;
-  bottom: 0;
+  bottom: -52px;
   width: 241px;
   height: 197px;
   padding: 19px 12px 6px 12px;
