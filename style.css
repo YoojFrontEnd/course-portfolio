@@ -612,12 +612,12 @@ input[name="checkbox"] {
   width: 232px;
   height: 352px;
   border-radius: 35px;
-  overflow: hidden;
 }
 
 .latestReleases__item-top-bg {
   position: relative;
   margin-bottom: 10px;
+  overflow: hidden;
 }
 
 .latestReleases__rating {
